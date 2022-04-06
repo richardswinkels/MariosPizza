@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario's pizza's</title>
+    <link rel="stylesheet" href="css/mario.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/tabel.css" />
+    <link rel="icon" href="favicon.ico" type="image/ico" />
+    <script src="js/javascript.js"></script>
+</head>
+
+<body id="personeel">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pizzas.html">Pizza's</a>
+        <a href="pastas.html">Pasta's</a>
+        <a href="bestel.html">Bestellen</a>
+        <a href="cursus.html">Cursus</a>
+        <a href="overons.html">Over ons</a>
+        <a href="login.html">Login</a>
+    </nav>
+    <main>
+        <article>
+            <h1>Personeelspagina</h1>
+            <p>Berekenen van de kostprijs van een pizza.</p>
+            <p>Let op, een pizza van 35 cm is 1,96 keer zo groot als de pizza van 25 cm.</p>
+            <div class="tabel">
+                <table>
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>Prijs per kilo</th>
+                        <th>Nodig <span id="nodig">voor pizza 25 cm (in gram)</span></th>
+                        <th>Pizza (25 centimeter)</th>
+                        <th>Pizza (35 centimeter)</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="tbIngredient1" /></td>
+                        <td><input type="number" id="tbPrijsKg1"/></td>
+                        <td><input type="number" id="tbNodig1" /></td>
+                        <td><input type="text" id="tbPizzaKlein1" readonly /></td>
+                        <td><input type="text" id="tbPizzaGroot1" readonly /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="tbIngredient2"/></td>
+                        <td><input type="number" id="tbPrijsKg2" /></td>
+                        <td><input type="number" id="tbNodig2" /></td>
+                        <td><input type="text" id="tbPizzaKlein2" readonly /></td>
+                        <td><input type="text" id="tbPizzaGroot2" readonly /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="tbIngredient3"/></td>
+                        <td><input type="number" id="tbPrijsKg3" /></td>
+                        <td><input type="number" id="tbNodig3" /></td>
+                        <td><input type="text" id="tbPizzaKlein3" readonly /></td>
+                        <td><input type="text" id="tbPizzaGroot3" readonly /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="tbIngredient4"/></td>
+                        <td><input type="number" id="tbPrijsKg4" /></td>
+                        <td><input type="number" id="tbNodig4" /></td>
+                        <td><input type="text" id="tbPizzaKlein4" readonly /></td>
+                        <td><input type="text" id="tbPizzaGroot4" readonly /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="tbIngredient5"/></td>
+                        <td><input type="number" id="tbPrijsKg5" /></td>
+                        <td><input type="number" id="tbNodig5" /></td>
+                        <td><input type="text" id="tbPizzaKlein5" readonly /></td>
+                        <td><input type="text" id="tbPizzaGroot5" readonly /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="tbIngredient6"/></td>
+                        <td><input type="number" id="tbPrijsKg6" /></td>
+                        <td><input type="number" id="tbNodig6" /></td>
+                        <td><input type="text" id="tbPizzaKlein6" readonly /></td>
+                        <td><input type="text" id="tbPizzaGroot6" readonly /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="tbIngredient7"/></td>
+                        <td><input type="number" id="tbPrijsKg7" /></td>
+                        <td><input type="number" id="tbNodig7" /></td>
+                        <td><input type="text" id="tbPizzaKlein7" readonly /></td>
+                        <td><input type="text" id="tbPizzaGroot7" readonly /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="tbIngredient8"/></td>
+                        <td><input type="number" id="tbPrijsKg8" /></td>
+                        <td><input type="number" id="tbNodig8" /></td>
+                        <td><input type="text" id="tbPizzaKlein8" readonly /></td>
+                        <td><input type="text" id="tbPizzaGroot8" readonly /></td>
+                    </tr>
+                    </table>
+                    <table>
+                    <tr>
+                        <td><input type="text" id="tbKostprijsKlein" placeholder="Kostprijs pizza 25cm" readonly/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="tbKostprijsGroot" placeholder="Kostprijs pizza 35cm" readonly/></td>
+                    </tr>
+                    <tr>
+                    <td><button type="button" onclick="btBereken_Click()" id="btBerekenen">Bereken prijs</button></td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+    </main>
+    <footer class="klein">
+        <p id="copyright">&#169; 2020 - 2025 Mario Bressanone</p>
+        <p id="voorwaarden"><a href="alv.html">Levervoorwaarden</a></p>
+    </footer>
+</body>
+
+</html>

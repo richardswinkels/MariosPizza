@@ -1,0 +1,122 @@
+/* Laat op schermen minder dan 800 pixels breed automatisch een horizontale scrollbar zien voor klasse tabel indien nodig */
+@media only screen and (max-width: 800px)
+{
+    .tabel {
+        overflow-x: auto;
+    }
+}
+
+/* lijn de tekst van alle tabellen links uit */
+table { 
+    text-align: left;
+}
+
+/* maak de ruimte tussen regels groter voor klasse menu, en zet de border-spacing */
+.menu {
+    line-height: 25px;
+    border-spacing: 0 55px;
+}
+
+/* Als scherm minimaal 500 pixels breed is */
+@media only screen and (min-width: 500px) {
+    /* stel de padding in van th binnen menu */
+    .menu th {
+        padding-left: 70px;
+        padding-right: 30px;
+    }
+    
+    /* stel de padding in voor td binnen menu*/
+    .menu td {
+        padding-left: 10px;
+    }
+}
+
+/* Als scherm maximaal 500 pixels breed is */
+@media only screen and (max-width: 500px) {
+    /* stel de padding in van th binnen menu */
+    .menu th {
+        padding-left: 10px;
+        padding-right: 5px;
+    }
+    
+        /* stel de padding in voor td binnen menu*/
+    .menu td {
+        padding-left: 10px;
+    }
+}
+
+/* zet de tekst aan de bovenkant binnen menu */
+.menu th, .menu td {
+    vertical-align: top;
+}
+
+/* laat span zien als block-level element zodat elke lijn op nieuwe regel komt (alternatief voor <br> )*/
+.menu span {
+    display: block;
+}
+
+/* stel de breedte van de afbeeldingen binnen menu in */
+.menu img {
+    width: 60px;
+}
+
+/* selecteer binnen menu, de laatste tr, en daar de laatste td van en stel een padding in en laat grijze lijn zien */
+.menu tr:last-child td:last-child {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+/* stel de table-layout in, voeg beide borders samen, en stel de bovenmarge, breedte en minimumbreedte in */
+.bestel {
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 30px;
+    width: 62%;
+    min-width: 360px;
+}
+
+/* zet de padding van de th en td elementen binnen bestel en laat een grijze lijn zien */
+.bestel th, .bestel td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+/* maak links binnen bestel paars */
+.bestel a {
+    color: #800080;
+}
+
+/* Als scherm maximaal 750 pixels breed is */
+@media only screen and (max-width: 750px) {
+    /* zorg dat derde en vierde th 90 pixels breed is */
+    .bestel th:nth-child(3), .bestel th:nth-child(4) {
+        width: 90px;
+    }
+
+}
+
+/* maak de invoervelden binnen bestel 50 pixels breed */
+.bestel input {
+    width: 50px;
+}
+
+/* zet de bovenmarges van de verschillende element op 15 pixels */
+#tbKostprijsKlein, #tbKostprijsGroot, #btBerekenen, #btAfdrukken {
+    margin-top: 15px;
+}
+
+/* maak de achtergrond van de personeelspagina geel */
+#personeel {
+    background-color: rgb(245, 245, 217);
+}
+
+/* maak de h1 van de personeelspagina rood */
+#personeel h1 {
+    color: red;
+}
+
+
+
+
+

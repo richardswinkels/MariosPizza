@@ -1,0 +1,34 @@
+/* zorg dat de navbar geen scrollbar krijgt en maak de achtergrondkleur zwart */
+nav {
+  overflow: hidden;
+  background-color: #444;
+}
+
+/* zet de links aan de linkerkant, maak de tekstkleur wit, zet de tekst in het midden, zet de onderlijning uit, stel de padding en tekstformaat in */
+nav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+/* wanneer scherm minimaal 800 pixels breed is */
+@media only screen and (min-width: 800px) {
+  /* zet marge van nav op 40 pixels */
+  nav {
+    margin-top: 40px;
+  }
+
+  /* zorg ervoor dat de achtergrondkleur van de menuitems rood worden als je er met je muis overheen gaat */
+  nav a:hover {
+    background-color: rgb(206,43,55);
+  }
+}
+
+/* maak link met klasse actief achtergrondkleur groen en tekstkleur zwart */
+nav a.actief {
+  background-color: rgb(0,146,70);
+  color: black;
+}

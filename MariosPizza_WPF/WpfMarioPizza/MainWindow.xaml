@@ -1,0 +1,94 @@
+﻿<Window x:Class="WpfMarioPizza.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMarioPizza"
+        mc:Ignorable="d"
+        Title="Mario's Pizza's" Height="512" Width="640" MinHeight="440" MinWidth="565" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/background.jpg"/>
+        </Grid.Background>
+
+        <Grid Background="white" Width="553.6" Height="402.4" Opacity="0.90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition Width="70"></ColumnDefinition>
+                <ColumnDefinition Width="40"></ColumnDefinition>
+                <ColumnDefinition Width="55"></ColumnDefinition>
+                <ColumnDefinition Width="55"></ColumnDefinition>
+                <ColumnDefinition Width="55"></ColumnDefinition>
+                <ColumnDefinition Width="80"></ColumnDefinition>
+                <ColumnDefinition Width="180"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="2"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="2"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="25"></RowDefinition>
+                <RowDefinition Height="15"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="5"></RowDefinition>
+                <RowDefinition Height="18"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="65"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="1" Grid.Column="1">Naam</TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="1">Adres</TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="1">Pcd/Plaats</TextBlock>
+            <TextBlock x:Name="tbFormaat" Grid.Row="9" Grid.Column="1" Visibility="Hidden">Formaat</TextBlock>
+            <TextBlock Grid.Row="11" Grid.Column="1">Aantal</TextBlock>
+            <TextBlock Grid.Row="13" Grid.Column="1">Totaalbedrag</TextBlock>
+
+            <TextBox x:Name="txbNaam" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3"/>
+            <TextBox x:Name="txbAdres" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="3"/>
+            <TextBox x:Name="txbPostcode" Grid.Row="5" Grid.Column="3"/>
+            <TextBox x:Name="txbPlaats" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="2" Margin="5,0,0,0"/>
+            <ComboBox x:Name="cmbGerecht" Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="2" Text="Selecteer een gerecht" SelectionChanged="cmbGerecht_SelectionChanged">
+                <ComboBoxItem>Hawaii</ComboBoxItem>
+                <ComboBoxItem>Margarita</ComboBoxItem>
+                <ComboBoxItem>Pepperoni</ComboBoxItem>
+                <ComboBoxItem>Funghi</ComboBoxItem>
+                <ComboBoxItem>Quattro Stagioni</ComboBoxItem>
+                <ComboBoxItem>Calzone</ComboBoxItem>
+                <ComboBoxItem>Prosciutto</ComboBoxItem>
+                <ComboBoxItem>Diavola</ComboBoxItem>
+                <ComboBoxItem>Napoli</ComboBoxItem>
+                <ComboBoxItem>Tonno (e cipolla)</ComboBoxItem>
+                <ComboBoxItem>Frute di Mare</ComboBoxItem>
+                <ComboBoxItem>Macaroni Bolognese</ComboBoxItem>
+                <ComboBoxItem>Farfalle Gorgonzola</ComboBoxItem>
+                <ComboBoxItem>Spaghetti Vongole</ComboBoxItem>
+                <ComboBoxItem>Fusilli Pesto</ComboBoxItem>
+                <ComboBoxItem>Lasagne Classico</ComboBoxItem>
+            </ComboBox>
+            <TextBlock x:Name="tbPrijsGerecht" Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="2" Margin="5,0,0,0" LayoutUpdated="tbPrijsGerecht_LayoutUpdated">Prijs: € 0,00</TextBlock>
+            <StackPanel x:Name="spRadiobuttons" Grid.Row="9" Grid.Column="3" Orientation="Vertical" Visibility="Hidden">
+                <RadioButton x:Name="rbt25cm" Click="rbt25cm_Click">25 cm</RadioButton>
+                <RadioButton x:Name="rbt35cm" Click="rbt35cm_Click">35 cm</RadioButton>
+            </StackPanel>
+            <TextBox x:Name="txbAantal" Grid.Row="11" Grid.Column="3" Grid.ColumnSpan="2" TextChanged="txbAantal_TextChanged" />
+            <TextBlock x:Name="tbTotaalbedrag" Grid.Row="13" Grid.Column="3" Grid.ColumnSpan="2">€ 0,00</TextBlock>
+            <Button x:Name="btToevoegen" Grid.Row="15" Grid.Column="3" Grid.ColumnSpan="2" Click="btToevoegen_Click">Toevoegen</Button>
+
+            <TextBlock Grid.Row="1" Grid.Column="7">Overzicht</TextBlock>
+            <ListBox x:Name="lbOverzicht" Grid.Row="3" Grid.Column="7" Grid.RowSpan="14" MouseDoubleClick="lbOverzicht_MouseDoubleClick">
+                
+            </ListBox>
+            <TextBlock x:Name="tbTotaal" Grid.Row="17" Grid.Column="7" HorizontalAlignment="Right" VerticalAlignment="Center">Totaal: € 0,00</TextBlock>
+            <Button Grid.Row="18" Grid.Column="7" Click="BtnBetalen_Click">Betalen</Button>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,99 @@
+/* verander lettertype en tekstkleur */
+* {
+    font-family: Arial, Helvetica;
+    color: #444;
+}
+
+/* zorg dat de verticale scrollbar altijd zichtbaar is */
+html {
+    overflow-y: scroll;
+}
+
+/* maak de body maximaal 800px breed en zorg dat de pagina horizontaal gecentreerd wordt */
+body {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Wanneer pagina maximaal 800 pixels breed is */
+@media only screen and (max-width: 800px) {
+    /* Zet de main en de footer 10 pixels van de linker- en rechterkant */
+    main, footer {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* maak tekst van .pizza schuingedrukt en groter */
+.pizza {
+    font-style: italic;
+    font-size: 120%;
+}
+
+/* maak het tekstformaat van klasse klein kleiner */
+.klein {
+    font-size: 80%;
+}
+
+/* maak tekst vetgedrukt */
+#tel {
+    font-weight: bold;
+}
+
+/* maak tekst normaal */
+#nodig {
+    font-weight: normal;
+}
+
+/* selecteer de oneven listitems van #alv en maak ze vetgedrukt */
+#alv li:nth-of-type(odd) {
+    font-weight: bold;
+}
+
+/* selecteer de even listitems van #alv en haal de bullet weg van de lijst */
+#alv li:nth-of-type(even) {
+    list-style-type: none;
+}
+
+/* maak de afbeelding 50% breed */
+#team img {
+    width: 50%;
+}
+
+/* zet mario aan de rechterkant */
+#mario, #mario img, #mario p {
+    float: right;
+}
+
+/* maak afbeelding mario breedte 50% en zet bovenmarge op 20px */
+#mario img {
+    margin-top: 20px;
+    width: 50%;
+}
+
+/* maak afbeelding guanlucca breedte 40% en zet bovenmarge op 20px */
+#guanlucca img {
+    margin-top: 20px;
+    width: 40%;
+}
+
+/* maak afbeelding carlos breedte 100% en zet bovenmarge op 20px */
+#carlos img {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* zet een bovenmarge van 80 pixels voor de footer*/
+footer {
+    margin-top: 80px;
+}
+
+/* zet copyright aan de linkerkant */
+#copyright {
+    float: left;
+}
+
+/* zet voorwaarden aan de rechterkant */
+#voorwaarden {
+    float: right;
+}
